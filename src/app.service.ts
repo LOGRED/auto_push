@@ -14,7 +14,8 @@ export class AppService {
             try {
                 await git.add('.')
                 await git.commit(`${date.getFullYear()}년${date.getMonth()}월${date.getDate()}일 ${date.getHours()}시${date.getMinutes()}분${date.getSeconds()}초`);
-                await git.push('origin', 'main')
+                const msg = await git.push('origin', 'main')
+                console.log(msg)
             } catch (error) {
                 console.error(error);
             }
