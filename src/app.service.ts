@@ -21,7 +21,7 @@ export class AppService {
         }
 
         push().then(() => {
-            return '푸쉬 완료';
+            console.log("푸쉬 완료")
         })
 
         return '검사 시작입니다';
